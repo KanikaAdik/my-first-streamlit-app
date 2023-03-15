@@ -18,6 +18,7 @@ dataframe = pd.read_csv(
         "Location",
     ],
 )
+dataframe = dataframe[dataframe["Price"] <= 100]
 # Display as integer
 dataframe["Airbnb Listing ID"] = dataframe["Airbnb Listing ID"].astype(int)
 # Round of values
@@ -30,7 +31,7 @@ dataframe["Location"] = dataframe["Location"].replace(
 
 # We have a limited budget, therefore we would like to exclude
 # listings with a price above 100 pounds per night
-dataframe = dataframe[dataframe["Price"] <= 100]
+
 
 
 st.markdown("Below is a map showing all the Airbnb listings with a red dot and the location we've chosen with a blue dot.")
@@ -57,4 +58,5 @@ st.plotly_chart(fig, use_container_width=True)
 
 st.markdown("Here we can see the dataframe created during this weeks project.")
 # Display dataframe and text
+
 st.dataframe(dataframe)
