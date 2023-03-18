@@ -35,7 +35,7 @@ dataframe["Location"] = dataframe["Location"].replace(
 
 #st.sidebar.write("# Code for streamlit tags sidebar")
 st.sidebar.slider('Meters from chosen location',1,5,10, key='jfnkerrnfvikwqejn')
-st.sidebar.slider('Price',dataframe["Price"].round(2))
+st.sidebar.slider('Price',dataframe["Price"])
 st.markdown("Below is a map showing all the Airbnb listings with a red dot and the location we've chosen with a blue dot.")
 
 # Create the plotly express figure
