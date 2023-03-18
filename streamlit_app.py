@@ -31,9 +31,11 @@ dataframe["Location"] = dataframe["Location"].replace(
 
 # We have a limited budget, therefore we would like to exclude
 # listings with a price above 100 pounds per night
+# maxtags =st.slider('Number miles away ?', , key='jfnkerrnfvikwqejn
 
-
-
+st.sidebar.write("# Code for streamlit tags sidebar")
+st.sidebar.slider('Meters from chosen location',1,5,10, key='jfnkerrnfvikwqejn')
+                  
 st.markdown("Below is a map showing all the Airbnb listings with a red dot and the location we've chosen with a blue dot.")
 
 # Create the plotly express figure
